@@ -1,0 +1,105 @@
+Comandos_Git
+
+https://youtu.be/USjZcfj8yxE?t=413
+
+# USER CONFIG
+
+git config --global user.name "Alberto"
+git config --global user.email "alberto.bandeira@gmail.com"
+
+# NEW REPO
+
+git init
+ls -al
+
+git status
+touch index.html
+git status
+
+# STAGING FILES
+
+git add index.html
+git status
+
+# COMMITS
+
+git commit -m "Created file"
+git status
+git log
+touch app.js
+touch styles.css
+git status
+git add index.html app.js
+git status
+git commit -m "Add logic"
+git status
+git log
+
+añadimos styles.css
+
+git status
+git add .
+git commit -m "Add styles"
+git status
+git log
+
+modifico styles.css
+
+git status
+git add styles.css
+git commit -m "Changed styles"
+git status
+git log
+
+
+# GO BACK
+git log
+git checkout 0789169d4f9ea24ab7493a7288c62ab39006d537
+git log
+
+
+# BRANCHES and GO FORWARD
+git branch
+git checkout master
+git branch
+git log
+
+git branch crazycolours
+git branch
+git checkout crazycolours
+git branch
+git log     (HEAD -> crazycolours, master)
+
+modifico index.html y styles.css
+
+git status
+git add .
+git commit -m "Changes on branch2"
+git log 	(HEAD -> crazycolours)
+			(master)
+git checkout master
+git log 	(HEAD -> master)
+
+# MERGE
+git branch
+git merge crazycolours
+git log 	(HEAD -> master, crazycolours)
+
+------
+GITHUB
+------
+
+https://youtu.be/nhNq2kIvi9s?t=106
+
+# Creamos el repo en la Web de GITHUB "BandeRepo"
+
+# Luego lo linkamos con nuestros archivos en local. (GITHUB -> Local)
+git remote add origin https://github.com/bande20/banderepo.git
+git remote add origin git@github.com:bande20/banderepo.git
+git remote set-url origin git@github.com:bande20/banderepo.git
+git push -u origin master
+ssh -vT git@github.com
+
+
+
+
