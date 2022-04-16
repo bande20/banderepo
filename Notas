@@ -1,0 +1,5 @@
+Notas
+
+ansible command
+
+ansible-playbook -i devel_hosts_bcn.ini deploy_infrastructure.yaml --extra-vars "datacenter=barcelona" --limit devel
